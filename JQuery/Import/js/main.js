@@ -102,3 +102,9 @@
 //     alert("Form submitted!");
 //   });
 // });
+// $(function () {
+//   $("#menu>li>a").css("color", "red"); // Selects the first level of menu items
+//   $("#menu a").css("background", "yellow"); // Selects all menu items have a tag
+//   $("form label + input").val("Enter value"); // Selects the input that is immediately preceded by a label
+//   $("form label ~ input").val("Empty value"); // Selects the input that is appear after a label
+// });

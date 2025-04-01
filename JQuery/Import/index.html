@@ -10,32 +10,21 @@
   <body>
     <script>
       $(function () {
-        $("#menu>li>a").css("color", "red"); // Selects the first level of menu items
-        $("#menu a").css("background", "yellow"); // Selects all menu items have a tag
-        $("form label + input").val("Enter value"); // Selects the input that is immediately preceded by a label
-        $("form label ~ input").val("Empty value"); // Selects the input that is appear after a label
+        $("a.img").on("click", function (e) {
+          var link_img = $("img").attr("src"); //no value
+          var link_img = $("img").attr("title", "avatar12"); //value
+
+          alert("Link image: " + link_img);
+          return false;
+        });
+        $("a.rm-img").on("click", function (e) {
+          $("img").removeAttr("title"); //remove attribute title
+          return false;
+        });
       });
     </script>
-    <ul id="menu">
-      <li><a href="">Menu 1</a></li>
-      <li>
-        <a href="">Menu 2</a>
-        <ul>
-          <li><a href="">Menu 2.1</a></li>
-          <li><a href="">Menu 2.2</a></li>
-          <li><a href="">Menu 2.3</a></li>
-        </ul>
-      </li>
-      <li><a href="">Menu 3</a></li>
-      <li><a href="">Menu 4</a></li>
-      <li><a href="">Menu 5</a></li>
-    </ul>
-    <form action="">
-      <label for="username">username</label>
-      <input type="text" id="username" name="username" value="" /> <br />
-      <label for="email">email</label>
-      <input type="email" id="email" name="email" value="" />
-      <input type="text" id="description" name="description" value="" />
-    </form>
+    <img src="/JQuery/Images/img.png" alt="avatar" title="avatar" />
+    <a class="img" href="#">Get Link image</a>
+    <a class="rm-img" href="#">Remove Title</a>
   </body>
 </html>
