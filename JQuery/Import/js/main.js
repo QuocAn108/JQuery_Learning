@@ -72,3 +72,33 @@
 //   $("p:nth-of-type(2)").css("color", "green"); // Selects the second <p> element and changes its text color to green
 //   $("span:only-of-type").css("color", "darkblue"); // Selects the only <span> element and changes its text color to dark blue
 // });
+// $(function () {
+//   $("input:button").click(function () {
+//     alert("Button clicked!");
+//   });
+//   $("input:checkbox").click(function () {
+//     alert("Checkbox clicked!");
+//   });
+//   $("input:radio").click(function () {
+//     alert("Radio button clicked!");
+//   });
+//   $("input:file").change(function () {
+//     alert("File input changed!");
+//   });
+//   $("input:text").focus(function () {
+//     console.log("Text input focused!");
+//   });
+//   $("input:password").blur(function () {
+//     alert("Password input blurred!");
+//   });
+//   $("textarea").change(function () {
+//     alert("Textarea changed!");
+//   });
+//   $("select").change(function () {
+//     alert("Select option changed!");
+//   });
+//   $("button[type=submit]").click(function (event) {
+//     event.preventDefault(); // Prevent form submission
+//     alert("Form submitted!");
+//   });
+// });

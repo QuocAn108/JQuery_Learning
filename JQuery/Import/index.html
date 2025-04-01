@@ -10,50 +10,32 @@
   <body>
     <script>
       $(function () {
-        $("input:button").click(function () {
-          alert("Button clicked!");
-        });
-        $("input:checkbox").click(function () {
-          alert("Checkbox clicked!");
-        });
-        $("input:radio").click(function () {
-          alert("Radio button clicked!");
-        });
-        $("input:file").change(function () {
-          alert("File input changed!");
-        });
-        $("input:text").focus(function () {
-          console.log("Text input focused!");
-        });
-        $("input:password").blur(function () {
-          alert("Password input blurred!");
-        });
-        $("textarea").change(function () {
-          alert("Textarea changed!");
-        });
-        $("select").change(function () {
-          alert("Select option changed!");
-        });
-        $("button[type=submit]").click(function (event) {
-          event.preventDefault(); // Prevent form submission
-          alert("Form submitted!");
-        });
+        $("#menu>li>a").css("color", "red"); // Selects the first level of menu items
+        $("#menu a").css("background", "yellow"); // Selects all menu items have a tag
+        $("form label + input").val("Enter value"); // Selects the input that is immediately preceded by a label
+        $("form label ~ input").val("Empty value"); // Selects the input that is appear after a label
       });
     </script>
-    <form>
-      <input type="text" id="name" placeholder="Enter your name" />
-      <input type="password" id="password" placeholder="Enter your password" />
-      <input type="checkbox" />
-      <input type="radio" />
-      <input type="file" />
-      <input type="button" value="Click Me" />
-      <textarea></textarea>
-      <select>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>
-      <button type="submit">Submit</button>
+    <ul id="menu">
+      <li><a href="">Menu 1</a></li>
+      <li>
+        <a href="">Menu 2</a>
+        <ul>
+          <li><a href="">Menu 2.1</a></li>
+          <li><a href="">Menu 2.2</a></li>
+          <li><a href="">Menu 2.3</a></li>
+        </ul>
+      </li>
+      <li><a href="">Menu 3</a></li>
+      <li><a href="">Menu 4</a></li>
+      <li><a href="">Menu 5</a></li>
+    </ul>
+    <form action="">
+      <label for="username">username</label>
+      <input type="text" id="username" name="username" value="" /> <br />
+      <label for="email">email</label>
+      <input type="email" id="email" name="email" value="" />
+      <input type="text" id="description" name="description" value="" />
     </form>
   </body>
 </html>
