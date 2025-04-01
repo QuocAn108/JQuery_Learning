@@ -60,3 +60,9 @@
 //   $("li:only-child").css("color", "darkRed"); //select only child
 //   $("li").css("color", "gray"); //select nth child
 // });
+// $(function () {
+//   $("p:contains('He')").css("color", "red"); // Selects all <p> elements that contain the text "He"
+//   $("p:empty").text("hehehe").css("color", "darkblue"); // Selects all empty <p> elements and sets their text to "hehehe" and color to dark blue
+//   $("p:has(span)").css("color", "green"); // Selects all <p> elements that have a <span> child and sets their color to green
+//   $("p:parent").css("background-color", "lightBlue"); // Selects all <p> elements that have a parent and sets their background color to yellow
+// });
