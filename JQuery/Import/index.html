@@ -8,23 +8,28 @@
     <script src="js/main.js"></script>
   </head>
   <body>
+    <style>
+      .highlight {
+        background: yellow;
+        color: red;
+      }
+    </style>
     <script>
       $(function () {
-        $("a.img").on("click", function (e) {
-          var link_img = $("img").attr("src"); //no value
-          var link_img = $("img").attr("title", "avatar12"); //value
-
-          alert("Link image: " + link_img);
-          return false;
-        });
-        $("a.rm-img").on("click", function (e) {
-          $("img").removeAttr("title"); //remove attribute title
-          return false;
+        $("p:first").click(function () {
+          // if ($(this).hasClass("highlight")) {
+          //   $(this).removeClass("highlight"); // Remove class if it exists
+          // } else {
+          //   $(this).addClass("highlight"); // Add class if it doesn't exist
+          // }
+          $(this).toggleClass("highlight"); // Toggle class
         });
       });
     </script>
-    <img src="/JQuery/Images/img.png" alt="avatar" title="avatar" />
-    <a class="img" href="#">Get Link image</a>
-    <a class="rm-img" href="#">Remove Title</a>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
   </body>
 </html>

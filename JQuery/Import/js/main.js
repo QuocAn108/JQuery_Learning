@@ -108,3 +108,17 @@
 //   $("form label + input").val("Enter value"); // Selects the input that is immediately preceded by a label
 //   $("form label ~ input").val("Empty value"); // Selects the input that is appear after a label
 // });
+
+// $(function () {
+//   $("a.img").on("click", function (e) {
+//     var link_img = $("img").attr("src"); //no value
+//     var link_img = $("img").attr("title", "avatar12"); //value
+
+//     alert("Link image: " + link_img);
+//     return false;
+//   });
+//   $("a.rm-img").on("click", function (e) {
+//     $("img").removeAttr("title"); //remove attribute title
+//     return false;
+//   });
+// });
