@@ -13,3 +13,15 @@ $(function () {
     $("p.name").css("color", "blue");
   });
 });
+
+$(function () {
+  $("p").css("color", "red");
+  $(".box").css({
+    width: "200px",
+    height: "100px",
+    border: "1px solid #333",
+    margin: "20px",
+  });
+  $("#box1").css("background-color", "black");
+  $("#box2, #box3").css("background-color", "gold");
+});
