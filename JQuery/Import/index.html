@@ -10,16 +10,50 @@
   <body>
     <script>
       $(function () {
-        $("p:first-of-type").css("color", "red"); // Selects the first <p> element and changes its text color to red
-        $("p:last-of-type").css("color", "blue"); // Selects the last <p> element and changes its text color to blue
-        $("p:nth-of-type(2)").css("color", "green"); // Selects the second <p> element and changes its text color to green
-        $("span:only-of-type").css("color", "darkblue"); // Selects the only <span> element and changes its text color to dark blue
+        $("input:button").click(function () {
+          alert("Button clicked!");
+        });
+        $("input:checkbox").click(function () {
+          alert("Checkbox clicked!");
+        });
+        $("input:radio").click(function () {
+          alert("Radio button clicked!");
+        });
+        $("input:file").change(function () {
+          alert("File input changed!");
+        });
+        $("input:text").focus(function () {
+          console.log("Text input focused!");
+        });
+        $("input:password").blur(function () {
+          alert("Password input blurred!");
+        });
+        $("textarea").change(function () {
+          alert("Textarea changed!");
+        });
+        $("select").change(function () {
+          alert("Select option changed!");
+        });
+        $("button[type=submit]").click(function (event) {
+          event.preventDefault(); // Prevent form submission
+          alert("Form submitted!");
+        });
       });
     </script>
-    <p><span>Hehe</span></p>
-    <p>hehehehe</p>
-    <p>hehehe</p>
-    <p>hehehehehe</p>
-    <span>djkljsdkdskl</span>
+    <form>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <input type="password" id="password" placeholder="Enter your password" />
+      <input type="checkbox" />
+      <input type="radio" />
+      <input type="file" />
+      <input type="button" value="Click Me" />
+      <textarea></textarea>
+      <select>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

@@ -66,3 +66,9 @@
 //   $("p:has(span)").css("color", "green"); // Selects all <p> elements that have a <span> child and sets their color to green
 //   $("p:parent").css("background-color", "lightBlue"); // Selects all <p> elements that have a parent and sets their background color to yellow
 // });
+// $(function () {
+//   $("p:first-of-type").css("color", "red"); // Selects the first <p> element and changes its text color to red
+//   $("p:last-of-type").css("color", "blue"); // Selects the last <p> element and changes its text color to blue
+//   $("p:nth-of-type(2)").css("color", "green"); // Selects the second <p> element and changes its text color to green
+//   $("span:only-of-type").css("color", "darkblue"); // Selects the only <span> element and changes its text color to dark blue
+// });
