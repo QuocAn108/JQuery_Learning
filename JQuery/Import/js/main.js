@@ -52,11 +52,11 @@
 //   //   $("p:parent").css("color", "pink"); // selector mount to index parent
 //   //   $("p:empty").css("color", "pink"); // selector mount to index empty
 // });
-$(function () {
-  $("li:first-child").css("color", "red"); //select first child
-  $("li:last-child").css("color", "blue"); //select last child
-  $("li:nth-child(2)").css("color", "green"); //select nth child
-  $("li:nth-child(3n+1)").css("color", "darkBlue"); //select nth with operation child
-  $("li:only-child").css("color", "darkRed"); //select only child
-  $("li").css("color", "gray"); //select nth child
-});
+// $(function () {
+//   $("li:first-child").css("color", "red"); //select first child
+//   $("li:last-child").css("color", "blue"); //select last child
+//   $("li:nth-child(2)").css("color", "green"); //select nth child
+//   $("li:nth-child(3n+1)").css("color", "darkBlue"); //select nth with operation child
+//   $("li:only-child").css("color", "darkRed"); //select only child
+//   $("li").css("color", "gray"); //select nth child
+// });
