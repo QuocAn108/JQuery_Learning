@@ -8,28 +8,32 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <style>
-      .highlight {
-        background: yellow;
-        color: red;
-      }
-    </style>
     <script>
       $(function () {
-        $("p:first").click(function () {
-          // if ($(this).hasClass("highlight")) {
-          //   $(this).removeClass("highlight"); // Remove class if it exists
-          // } else {
-          //   $(this).addClass("highlight"); // Add class if it doesn't exist
-          // }
-          $(this).toggleClass("highlight"); // Toggle class
+        $("#form-login").submit(function () {
+          var a = $("#username").val(); //get value of username
+          var b = $("#password").val(); //get value of password
+          $("#val_username").text(a); //set value of username in div val_username
+          $("#val_password").text(b); //set value of password in div val_password
+          str_result =
+            " <p>Username: <strong id='val_username'>" +
+            a +
+            "</strong></p><p>Password: <strong id='val_password'>" +
+            b +
+            "</strong></p>";
+          $("#result").html(str_result); //set content of div result
+          alert($("#result").html()); //show content of div result in alert box
+          return false;
         });
       });
     </script>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <p>Paragraph 3</p>
-    <p>Paragraph 4</p>
-    <p>Paragraph 5</p>
+    <form id="form-login" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" value="" name="username" /> <br />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" value="" />
+      <input type="submit" name="sm-submit" value="login" />
+      <div id="result"></div>
+    </form>
   </body>
 </html>
